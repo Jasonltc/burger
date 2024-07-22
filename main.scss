@@ -1,0 +1,692 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-margin: 60px;
+}
+
+body {
+  background: wheat;
+}
+
+img {
+  width: 100%;
+}
+
+//Header
+header {
+  position: sticky;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+  top: 0;
+  background-color: wheat;
+  z-index: 10;
+
+  @media screen and (width >= 1224px) {
+    max-width: 1100px;
+    padding: 20px;
+    margin: auto;
+  }
+
+  @media screen and (width >= 1900px) {
+    max-width: 1500px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      .logo-img {
+        background-color: hsl(45, 99%, 55%);
+        border-radius: 5px;
+        padding: 6px;
+
+        img {
+          width: 20px;
+        }
+      }
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    .menu-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 400px;
+      top: 0;
+      left: 0;
+      background: wheat;
+      transform: translateY(-400px);
+      transition: 0.23s;
+      box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
+      z-index: 5;
+
+      @media screen and (width >= 768px) {
+        transform: translateY(0);
+        height: unset;
+        box-shadow: unset;
+        position: unset;
+        width: unset;
+      }
+
+      &.open {
+        transform: translateY(0);
+      }
+
+      .menu-items {
+        list-style: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+
+        @media screen and (width >= 768px) {
+          flex-direction: row;
+        }
+
+        .menu-item {
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: #000;
+          display: block;
+          position: relative;
+
+          @media screen and (width >= 768px) {
+            font-size: 1rem;
+          }
+
+          &::after {
+            content: "";
+            width: 0;
+            height: 3px;
+            background-color: hsl(45, 99%, 55%);
+            position: absolute;
+            left: 0;
+            bottom: -0.5rem;
+            transition: width 0.3s;
+          }
+
+          &:hover:after {
+            width: 60%;
+          }
+        }
+
+        .close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: 1.5rem;
+
+          @media screen and (width >= 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .toggle {
+      font-size: 1.5rem;
+
+      @media screen and (width >= 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (width >= 768px) {
+  .section-text-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left-part {
+      width: 50%;
+      text-align: left;
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+  }
+}
+
+section {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media screen and (width >= 768px) {
+    padding: 20px;
+  }
+
+  @media screen and (width >= 1024px) {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+  }
+
+  @media screen and (width >= 1224px) {
+    max-width: 1100px;
+  }
+
+  @media screen and (width >= 1900px) {
+    max-width: 1500px;
+  }
+
+  .burger-image {
+    @media screen and (width >= 768px) {
+      width: 50%;
+    }
+  }
+
+  .sub-section-title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    @media screen and (width >= 1024px) {
+      font-size: 2rem;
+    }
+
+    &.middle-title {
+      @media screen and (width >= 1024px) {
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  .section-text {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+
+    @media screen and (width >= 768px) {
+      max-width: 350px;
+    }
+
+    @media screen and (width >= 1440px) {
+      max-width: 500px;
+      font-size: 1.5rem;
+    }
+  }
+
+  .section-interaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    @media screen and (width >= 768px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: unset;
+    }
+
+    .Active-button {
+      padding: 10px 20px;
+      background-color: hsl(45, 99%, 55%);
+      border: none;
+      border-radius: 50px;
+      order: 2;
+      font-size: 1rem;
+      font-weight: 500;
+
+      @media screen and (width >= 768px) {
+        order: 0;
+      }
+
+      @media screen and (width >= 1440px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    img {
+      width: 50px;
+    }
+  }
+}
+
+//Hero section
+.hero-section {
+  margin-bottom: 70px;
+
+  @media screen and (width >= 1024px) {
+    margin-bottom: unset;
+  }
+
+  .main-section-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    @media screen and (width >= 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (width >= 1024px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .burger-hero-image {
+    position: relative;
+
+    @media screen and (width >= 768px) {
+      width: 50%;
+    }
+
+    .hero-burger {
+      width: 250px;
+      position: relative;
+      z-index: 2;
+      transform: translateY(-200px);
+      opacity: 0;
+
+      @media screen and (width >= 1024px) {
+        width: 70%;
+      }
+    }
+
+    .hero-dish {
+      max-width: initial;
+      width: 320px;
+      position: absolute;
+      bottom: -2.5rem;
+      left: 20px;
+      transform: translateY(200px);
+      opacity: 0;
+
+      @media screen and (width >= 1024px) {
+        left: 60px;
+        width: 75%;
+      }
+
+      @media screen and (width >= 1900px) {
+        left: 85px;
+        bottom: -65px;
+      }
+    }
+
+    .home-ingredient {
+      width: 60px;
+      filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
+      position: absolute;
+      z-index: 3;
+      transform: translateY(-200px);
+      opacity: 0;
+
+      &.home-potato-1 {
+        top: 1rem;
+        left: 1.75rem;
+      }
+
+      &.home-potato-2 {
+        width: 60px;
+        top: 9rem;
+        right: 1rem;
+      }
+
+      &.home-tomato-1 {
+        right: 30px;
+        bottom: -1.5rem;
+        left: 5.5rem;
+      }
+
+      &.home-tomato-2 {
+        top: -1rem;
+        left: 7.75rem;
+      }
+
+      &.home-lettuce-1 {
+        top: 0.5rem;
+        right: 2rem;
+      }
+
+      &.home-lettuce-2 {
+        left: 1rem;
+        bottom: 2rem;
+      }
+    }
+  }
+}
+
+// secret
+.recipe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (width >= 1024px) {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .recipe-image {
+    transform: translateX(-200px);
+    opacity: 0;
+
+    img {
+      width: 70%;
+
+      @media screen and (width >= 1024px) {
+        width: 90%;
+      }
+    }
+  }
+
+  .recipe-data {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  .recipe-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @media screen and (width >= 1224px) {
+      gap: 25px;
+    }
+
+    &:nth-child(even) {
+      .recipe-box {
+        order: 1;
+      }
+    }
+
+    .recipe-box {
+      background-color: hsl(45, 99%, 55%);
+      padding: 5px;
+      border-radius: 5px;
+
+      .recipe-img {
+        width: 50px;
+
+        @media screen and (width >= 768px) {
+          width: 120px;
+        }
+
+        @media screen and (width >= 1224px) {
+          width: 140px;
+        }
+      }
+    }
+
+    .recipe-title {
+      font-size: 0.938rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+
+      @media screen and (width >= 768px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .recipe-description {
+      font-size: 0.813rem;
+      text-align: left;
+
+      @media screen and (width >= 768px) {
+        width: 150px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// popular
+.burger-wrapper {
+  display: grid;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (width >= 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (width >= 1024px) {
+    row-gap: 75px;
+  }
+
+  @media screen and (width >= 1224px) {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 75px;
+  }
+
+  .burger-box {
+    position: relative;
+    background: hsl(45, 99%, 55%);
+    padding: 6rem 0.75rem 1rem;
+    border-radius: 1rem;
+    border: 4px solid #fff;
+    transform: scale(0.4);
+    opacity: 0;
+
+    .burger-image {
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      right: 0;
+      width: 120px;
+      margin: 0 auto;
+      filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
+      transition: transform 0.4s;
+
+      @media screen and (width >= 1024px) {
+        top: -4rem;
+        width: 60%;
+      }
+
+      @media screen and (width >= 1900px) {
+        width: 45%;
+      }
+    }
+
+    .burger-name {
+      font-family: "Aclonica", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .price-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (width >= 768px) {
+        width: 150px;
+        margin: auto;
+      }
+
+      .price {
+        font-size: 1rem;
+        font-family: "Aclonica", sans-serif;
+      }
+
+      .buy-btn {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.big-burger {
+  transform: translateY(300px);
+  opacity: 0;
+}
+
+//delivery
+.contact-box {
+  background-color: hsl(22, 100%, 8%);
+  color: hsl(34, 100%, 96%);
+  text-align: center;
+  padding: 30px;
+  border-radius: 40px;
+  opacity: 0;
+
+  .small-burger {
+    width: 50px;
+    rotate: 20deg;
+    transform: translateX(-160px);
+    margin: 30px 0 10px;
+    position: absolute;
+  }
+
+  .soda {
+    width: 30px;
+    transform: translateX(100px);
+    margin: 30px 0 10px;
+    position: absolute;
+
+    @media screen and (width >= 768px) {
+      transform: translateX(60px);
+      position: relative;
+    }
+  }
+
+  .contact-sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: hsl(45, 99%, 55%);
+  }
+
+  .call {
+    color: hsl(34, 100%, 96%);
+    margin-bottom: 40px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .social-icon-wrapper {
+    margin: 20px 0 40px;
+
+    span {
+      padding: 5px;
+      background: hsl(45, 99%, 55%);
+      border-radius: 100%;
+
+      i {
+        color: #000;
+      }
+    }
+  }
+
+  .write-us {
+    @media screen and (width >= 768px) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .contact-info {
+      @media screen and (width >= 768px) {
+        order: 2;
+        width: 50%;
+      }
+    }
+
+    .contact-man {
+      margin-top: 30px;
+
+      @media screen and (width >= 768px) {
+        order: 0;
+        width: 50%;
+        margin-top: unset;
+      }
+    }
+  }
+
+  .contact-text {
+    font-size: 1.2rem;
+  }
+}
+
+//Footer
+footer {
+  text-align: center;
+  margin-bottom: 30px;
+
+  h2 {
+    font-family: "Aclonica", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+  }
+
+  .footer-link-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+
+    @media screen and (width >= 768px) {
+      max-width: 500px;
+      margin: 30px auto;
+    }
+  }
+
+  .social-links {
+    margin-bottom: 15px;
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+//scroll up
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50rem;
+  background-color: hsl(45, 99%, 55%);
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
+  color: hsl(22, 100%, 8%);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  border-radius: 0.35rem;
+  z-index: 10;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  &.show-scroll-up {
+    bottom: 3rem;
+  }
+}

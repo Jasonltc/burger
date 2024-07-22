@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-margin: 60px;
+}
+
+body {
+  background: wheat;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  position: sticky;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+  top: 0;
+  background-color: wheat;
+  z-index: 10;
+}
+@media screen and (width >= 1224px) {
+  header {
+    max-width: 1100px;
+    padding: 20px;
+    margin: auto;
+  }
+}
+@media screen and (width >= 1900px) {
+  header {
+    max-width: 1500px;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+header nav .logo-image-wrapper .logo-img {
+  background-color: hsl(45, 99%, 55%);
+  border-radius: 5px;
+  padding: 6px;
+}
+header nav .logo-image-wrapper .logo-img img {
+  width: 20px;
+}
+header nav .logo-image-wrapper span {
+  font-weight: 800;
+}
+header nav .menu-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  top: 0;
+  left: 0;
+  background: wheat;
+  transform: translateY(-400px);
+  transition: 0.23s;
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
+  z-index: 5;
+}
+@media screen and (width >= 768px) {
+  header nav .menu-wrapper {
+    transform: translateY(0);
+    height: unset;
+    box-shadow: unset;
+    position: unset;
+    width: unset;
+  }
+}
+header nav .menu-wrapper.open {
+  transform: translateY(0);
+}
+header nav .menu-wrapper .menu-items {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (width >= 768px) {
+  header nav .menu-wrapper .menu-items {
+    flex-direction: row;
+  }
+}
+header nav .menu-wrapper .menu-items .menu-item {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  position: relative;
+}
+@media screen and (width >= 768px) {
+  header nav .menu-wrapper .menu-items .menu-item {
+    font-size: 1rem;
+  }
+}
+header nav .menu-wrapper .menu-items .menu-item::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: hsl(45, 99%, 55%);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
+}
+header nav .menu-wrapper .menu-items .menu-item:hover:after {
+  width: 60%;
+}
+header nav .menu-wrapper .menu-items .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+}
+@media screen and (width >= 768px) {
+  header nav .menu-wrapper .menu-items .close {
+    display: none;
+  }
+}
+header nav .toggle {
+  font-size: 1.5rem;
+}
+@media screen and (width >= 768px) {
+  header nav .toggle {
+    display: none;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .section-text-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-text-img .left-part {
+    width: 50%;
+    text-align: left;
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+section {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (width >= 768px) {
+  section {
+    padding: 20px;
+  }
+}
+@media screen and (width >= 1024px) {
+  section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+  }
+}
+@media screen and (width >= 1224px) {
+  section {
+    max-width: 1100px;
+  }
+}
+@media screen and (width >= 1900px) {
+  section {
+    max-width: 1500px;
+  }
+}
+@media screen and (width >= 768px) {
+  section .burger-image {
+    width: 50%;
+  }
+}
+section .sub-section-title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (width >= 1024px) {
+  section .sub-section-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (width >= 1024px) {
+  section .sub-section-title.middle-title {
+    margin-bottom: 80px;
+  }
+}
+section .section-text {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+@media screen and (width >= 768px) {
+  section .section-text {
+    max-width: 350px;
+  }
+}
+@media screen and (width >= 1440px) {
+  section .section-text {
+    max-width: 500px;
+    font-size: 1.5rem;
+  }
+}
+section .section-interaction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+@media screen and (width >= 768px) {
+  section .section-interaction {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: unset;
+  }
+}
+section .section-interaction .Active-button {
+  padding: 10px 20px;
+  background-color: hsl(45, 99%, 55%);
+  border: none;
+  border-radius: 50px;
+  order: 2;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media screen and (width >= 768px) {
+  section .section-interaction .Active-button {
+    order: 0;
+  }
+}
+@media screen and (width >= 1440px) {
+  section .section-interaction .Active-button {
+    font-size: 1.3rem;
+  }
+}
+section .section-interaction img {
+  width: 50px;
+}
+
+.hero-section {
+  margin-bottom: 70px;
+}
+@media screen and (width >= 1024px) {
+  .hero-section {
+    margin-bottom: unset;
+  }
+}
+.hero-section .main-section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (width >= 768px) {
+  .hero-section .main-section-title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (width >= 1024px) {
+  .hero-section .main-section-title {
+    font-size: 3.5rem;
+  }
+}
+.hero-section .burger-hero-image {
+  position: relative;
+}
+@media screen and (width >= 768px) {
+  .hero-section .burger-hero-image {
+    width: 50%;
+  }
+}
+.hero-section .burger-hero-image .hero-burger {
+  width: 250px;
+  position: relative;
+  z-index: 2;
+  transform: translateY(-200px);
+  opacity: 0;
+}
+@media screen and (width >= 1024px) {
+  .hero-section .burger-hero-image .hero-burger {
+    width: 70%;
+  }
+}
+.hero-section .burger-hero-image .hero-dish {
+  max-width: initial;
+  width: 320px;
+  position: absolute;
+  bottom: -2.5rem;
+  left: 20px;
+  transform: translateY(200px);
+  opacity: 0;
+}
+@media screen and (width >= 1024px) {
+  .hero-section .burger-hero-image .hero-dish {
+    left: 60px;
+    width: 75%;
+  }
+}
+@media screen and (width >= 1900px) {
+  .hero-section .burger-hero-image .hero-dish {
+    left: 85px;
+    bottom: -65px;
+  }
+}
+.hero-section .burger-hero-image .home-ingredient {
+  width: 60px;
+  filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
+  position: absolute;
+  z-index: 3;
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.hero-section .burger-hero-image .home-ingredient.home-potato-1 {
+  top: 1rem;
+  left: 1.75rem;
+}
+.hero-section .burger-hero-image .home-ingredient.home-potato-2 {
+  width: 60px;
+  top: 9rem;
+  right: 1rem;
+}
+.hero-section .burger-hero-image .home-ingredient.home-tomato-1 {
+  right: 30px;
+  bottom: -1.5rem;
+  left: 5.5rem;
+}
+.hero-section .burger-hero-image .home-ingredient.home-tomato-2 {
+  top: -1rem;
+  left: 7.75rem;
+}
+.hero-section .burger-hero-image .home-ingredient.home-lettuce-1 {
+  top: 0.5rem;
+  right: 2rem;
+}
+.hero-section .burger-hero-image .home-ingredient.home-lettuce-2 {
+  left: 1rem;
+  bottom: 2rem;
+}
+
+.recipe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (width >= 1024px) {
+  .recipe-container {
+    justify-content: center;
+    gap: 50px;
+  }
+}
+.recipe-container .recipe-image {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.recipe-container .recipe-image img {
+  width: 70%;
+}
+@media screen and (width >= 1024px) {
+  .recipe-container .recipe-image img {
+    width: 90%;
+  }
+}
+.recipe-container .recipe-data {
+  transform: translateX(200px);
+  opacity: 0;
+}
+.recipe-container .recipe-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (width >= 1224px) {
+  .recipe-container .recipe-card {
+    gap: 25px;
+  }
+}
+.recipe-container .recipe-card:nth-child(even) .recipe-box {
+  order: 1;
+}
+.recipe-container .recipe-card .recipe-box {
+  background-color: hsl(45, 99%, 55%);
+  padding: 5px;
+  border-radius: 5px;
+}
+.recipe-container .recipe-card .recipe-box .recipe-img {
+  width: 50px;
+}
+@media screen and (width >= 768px) {
+  .recipe-container .recipe-card .recipe-box .recipe-img {
+    width: 120px;
+  }
+}
+@media screen and (width >= 1224px) {
+  .recipe-container .recipe-card .recipe-box .recipe-img {
+    width: 140px;
+  }
+}
+.recipe-container .recipe-card .recipe-title {
+  font-size: 0.938rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+@media screen and (width >= 768px) {
+  .recipe-container .recipe-card .recipe-title {
+    font-size: 1.2rem;
+  }
+}
+.recipe-container .recipe-card .recipe-description {
+  font-size: 0.813rem;
+  text-align: left;
+}
+@media screen and (width >= 768px) {
+  .recipe-container .recipe-card .recipe-description {
+    width: 150px;
+    font-size: 1rem;
+  }
+}
+
+.burger-wrapper {
+  display: grid;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (width >= 768px) {
+  .burger-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (width >= 1024px) {
+  .burger-wrapper {
+    row-gap: 75px;
+  }
+}
+@media screen and (width >= 1224px) {
+  .burger-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 75px;
+  }
+}
+.burger-wrapper .burger-box {
+  position: relative;
+  background: hsl(45, 99%, 55%);
+  padding: 6rem 0.75rem 1rem;
+  border-radius: 1rem;
+  border: 4px solid #fff;
+  transform: scale(0.4);
+  opacity: 0;
+}
+.burger-wrapper .burger-box .burger-image {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  right: 0;
+  width: 120px;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
+  transition: transform 0.4s;
+}
+@media screen and (width >= 1024px) {
+  .burger-wrapper .burger-box .burger-image {
+    top: -4rem;
+    width: 60%;
+  }
+}
+@media screen and (width >= 1900px) {
+  .burger-wrapper .burger-box .burger-image {
+    width: 45%;
+  }
+}
+.burger-wrapper .burger-box .burger-name {
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.burger-wrapper .burger-box .price-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (width >= 768px) {
+  .burger-wrapper .burger-box .price-list {
+    width: 150px;
+    margin: auto;
+  }
+}
+.burger-wrapper .burger-box .price-list .price {
+  font-size: 1rem;
+  font-family: "Aclonica", sans-serif;
+}
+.burger-wrapper .burger-box .price-list .buy-btn {
+  padding: 5px;
+}
+
+.big-burger {
+  transform: translateY(300px);
+  opacity: 0;
+}
+
+.contact-box {
+  background-color: hsl(22, 100%, 8%);
+  color: hsl(34, 100%, 96%);
+  text-align: center;
+  padding: 30px;
+  border-radius: 40px;
+  opacity: 0;
+}
+.contact-box .small-burger {
+  width: 50px;
+  rotate: 20deg;
+  transform: translateX(-160px);
+  margin: 30px 0 10px;
+  position: absolute;
+}
+.contact-box .soda {
+  width: 30px;
+  transform: translateX(100px);
+  margin: 30px 0 10px;
+  position: absolute;
+}
+@media screen and (width >= 768px) {
+  .contact-box .soda {
+    transform: translateX(60px);
+    position: relative;
+  }
+}
+.contact-box .contact-sub-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: hsl(45, 99%, 55%);
+}
+.contact-box .call {
+  color: hsl(34, 100%, 96%);
+  margin-bottom: 40px;
+  display: block;
+  text-decoration: none;
+}
+.contact-box .social-icon-wrapper {
+  margin: 20px 0 40px;
+}
+.contact-box .social-icon-wrapper span {
+  padding: 5px;
+  background: hsl(45, 99%, 55%);
+  border-radius: 100%;
+}
+.contact-box .social-icon-wrapper span i {
+  color: #000;
+}
+@media screen and (width >= 768px) {
+  .contact-box .write-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  }
+}
+@media screen and (width >= 768px) {
+  .contact-box .write-us .contact-info {
+    order: 2;
+    width: 50%;
+  }
+}
+.contact-box .write-us .contact-man {
+  margin-top: 30px;
+}
+@media screen and (width >= 768px) {
+  .contact-box .write-us .contact-man {
+    order: 0;
+    width: 50%;
+    margin-top: unset;
+  }
+}
+.contact-box .contact-text {
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+footer h2 {
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+footer .footer-link-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media screen and (width >= 768px) {
+  footer .footer-link-wrapper {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+}
+footer .social-links {
+  margin-bottom: 15px;
+}
+footer .social-links span {
+  font-size: 1.2rem;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50rem;
+  background-color: hsl(45, 99%, 55%);
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
+  color: hsl(22, 100%, 8%);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  border-radius: 0.35rem;
+  z-index: 10;
+  transition: all 0.4s;
+}
+.scrollup:hover {
+  transform: translateY(-0.5rem);
+}
+.scrollup.show-scroll-up {
+  bottom: 3rem;
+}/*# sourceMappingURL=main.css.map */

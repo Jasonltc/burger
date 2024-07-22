@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger website</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo-image-wrapper">
+          <div class="logo-img">
+            <img src="./asset/logo-burger.svg" alt="logo" />
+          </div>
+          <span>Burger</span>
+        </div>
+
+        <div class="menu-wrapper">
+          <ul class="menu-items">
+            <li><a href="#" class="menu-item">Home</a></li>
+            <li><a href="#secret" class="menu-item">Recipe</a></li>
+            <li><a href="#popular-burger" class="menu-item">Popular</a></li>
+            <li><a href="#delivery" class="menu-item">Delivery</a></li>
+            <li><a href="#contact-us" class="menu-item">Contact</a></li>
+            <li class="close"><i class="ri-close-large-line"></i></li>
+          </ul>
+        </div>
+
+        <div class="toggle">
+          <i class="ri-apps-2-fill"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section trigger-animation">
+      <div class="section-text-img">
+        <div class="left-part">
+          <h1 class="main-section-title">love every burger</h1>
+
+          <p class="section-text">
+            We serve the best burgers on the planet, paving the way for cooking
+            and preparing hot delicious burgers
+          </p>
+
+          <div class="section-interaction">
+            <button class="Active-button">Bite Now</button>
+            <img src="./asset/sticker-potatoes.svg" alt="chips" />
+          </div>
+        </div>
+
+        <div class="burger-hero-image">
+          <img src="./asset/home-burger.png" alt="" class="hero-burger" />
+          <img src="./asset/home-dish.png" alt="" class="hero-dish" />
+          <img
+            src="./asset/home-potato.png"
+            alt=""
+            class="home-ingredient home-potato-1"
+          />
+          <img
+            src="./asset/home-potato.png"
+            alt=""
+            class="home-ingredient home-potato-2"
+          />
+          <img
+            src="./asset/home-tomato.png"
+            alt=""
+            class="home-ingredient home-tomato-1"
+          />
+          <img
+            src="./asset/home-tomato.png"
+            alt=""
+            class="home-ingredient home-tomato-2"
+          />
+          <img
+            src="./asset/home-lettuce.png"
+            alt=""
+            class="home-ingredient home-lettuce-1"
+          />
+          <img
+            src="./asset/home-lettuce.png"
+            alt=""
+            class="home-ingredient home-lettuce-2"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="secret-recipe trigger-animation" id="secret">
+      <h2 class="sub-section-title middle-title">our secret recipe</h2>
+
+      <div class="recipe-container">
+        <div class="recipe-image">
+          <img src="./asset/recipe-burger.png" alt="" />
+        </div>
+
+        <div class="recipe-data">
+          <div class="recipe-card">
+            <div class="recipe-box">
+              <img
+                src="./asset/recipe-bread.png"
+                alt="Bread"
+                class="recipe-img"
+              />
+            </div>
+
+            <div>
+              <h3 class="recipe-title">Bread</h3>
+              <p class="recipe-description">Fresh bread, baked to perfection</p>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-box">
+              <img
+                src="./asset/recipe-cheese.png"
+                alt="chesse"
+                class="recipe-img"
+              />
+            </div>
+
+            <div>
+              <h3 class="recipe-title">Cheese</h3>
+              <p class="recipe-description">
+                Chesse for a fantastic and healthy future
+              </p>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-box">
+              <img
+                src="./asset/recipe-meat.png"
+                alt="meat"
+                class="recipe-img"
+              />
+            </div>
+
+            <div>
+              <h3 class="recipe-title">Meat</h3>
+              <p class="recipe-description">100% pure beef, big and meaty</p>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-box">
+              <img
+                src="./asset/recipe-vegetable.png"
+                alt="Vegetables"
+                class="recipe-img"
+              />
+            </div>
+
+            <div>
+              <h3 class="recipe-title">Vegetables</h3>
+              <p class="recipe-description">
+                Vegetables full of the essence of nature and organic
+              </p>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <div class="recipe-box">
+              <img
+                src="./asset/recipe-sauces.png"
+                alt="sauces"
+                class="recipe-img"
+              />
+            </div>
+
+            <div>
+              <h3 class="recipe-title">Sauces</h3>
+              <p class="recipe-description">
+                Fresh saucesm delicious for the palate
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-burger trigger-animation" id="popular-burger">
+      <h2 class="sub-section-title middle-title">most devoured burgers</h2>
+      <div class="burger-wrapper">
+        <article class="burger-box">
+          <img
+            src="./asset/popular-burger-chicken.png"
+            alt="burger"
+            class="burger-image"
+          />
+          <p class="burger-name">Chicken Burger</p>
+          <div class="price-list">
+            <p class="price">$6</p>
+            <button class="buy-btn">
+              <i class="ri-shopping-bag-3-fill"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="burger-box">
+          <img
+            src="./asset/popular-burger-classic.png"
+            alt="burger"
+            class="burger-image"
+          />
+          <p class="burger-name">Classic Burger</p>
+          <div class="price-list">
+            <p class="price">$10</p>
+            <button class="buy-btn">
+              <i class="ri-shopping-bag-3-fill"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="burger-box">
+          <img
+            src="./asset/popular-burger-grill.png"
+            alt="burger"
+            class="burger-image"
+          />
+          <p class="burger-name">Grill Burger</p>
+          <div class="price-list">
+            <p class="price">$7</p>
+            <button class="buy-btn">
+              <i class="ri-shopping-bag-3-fill"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="burger-box">
+          <img
+            src="./asset/popular-burger-big.png"
+            alt="burger"
+            class="burger-image"
+          />
+          <p class="burger-name">Big Burger</p>
+          <div class="price-list">
+            <p class="price">$25</p>
+            <button class="buy-btn">
+              <i class="ri-shopping-bag-3-fill"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="burger-box">
+          <img
+            src="./asset/popular-burger-meat.png"
+            alt="burger"
+            class="burger-image"
+          />
+          <p class="burger-name">Meat Burger</p>
+          <div class="price-list">
+            <p class="price">$17</p>
+            <button class="buy-btn">
+              <i class="ri-shopping-bag-3-fill"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="delivery trigger-animation" id="delivery">
+      <div class="section-text-img">
+        <div class="left-part">
+          <h2 class="sub-section-title">Fast delivery</h2>
+
+          <p class="section-text">
+            Place your order for your favorite burger and we will deliver it to
+            your door in minutes, get in touch and don't leave hungry
+          </p>
+
+          <div class="section-interaction">
+            <button class="Active-button">Contact now</button>
+            <img src="./asset/sticker-glass.svg" alt="drink" />
+          </div>
+        </div>
+
+        <div class="burger-image big-burger">
+          <img src="./asset/delivery-burger.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us trigger-animation" id="contact-us">
+      <div class="contact-box">
+        <h2 class="sub-section-title">Contact Now</h2>
+        <img src="./asset/sticker-burger.svg" alt="" class="small-burger" />
+
+        <div class="write-us">
+          <div class="contact-info">
+            <h3 class="contact-sub-title">Write us</h3>
+
+            <div class="social-icon-wrapper">
+              <span><i class="ri-whatsapp-line"></i></span>
+              <span><i class="ri-facebook-circle-line"></i></span>
+              <span><i class="ri-chat-3-line"></i></span>
+            </div>
+
+            <p class="contact-sub-title">Call Us and order</p>
+
+            <a href="tel: +230 000000000" class="call">+230 000000000</a>
+
+            <p class="contact-sub-title">Find us here</p>
+            <p class="contact-text">Mauritius</p>
+            <img src="./asset/sticker-soda.svg" alt="" class="soda" />
+          </div>
+
+          <img src="./asset/contact-man.png" alt="" class="contact-man" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Burger</h2>
+      <div class="footer-link-wrapper">
+        <p>Terms & Agreements</p>
+        <p>privacy policy</p>
+      </div>
+      <div class="social-links">
+        <span><i class="ri-whatsapp-line"></i></span>
+        <span><i class="ri-facebook-circle-line"></i></span>
+        <span><i class="ri-instagram-line"></i></span>
+      </div>
+      <p>@all rights reserved by Jason</p>
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
